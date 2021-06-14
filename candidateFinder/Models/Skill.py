@@ -1,0 +1,2 @@
+class Skill:
+    title: str
