@@ -1,5 +1,7 @@
 # Matcher
 
+* Short video demonstration can be found in Attachment folder
+
 ## Assumptions
 * There wasn't exact instruction on how to trigger the logic so I assumed that you expected api call with Django framework(heard you are using Django and Postgres) - so I tried to learn a bit about that framework as well.
 * Also there wasn't an exact explanation of what makes the match strong as there are 2 parameters (so in code you can find commented rows marked that they are part of Option 2) - explanation below
@@ -15,11 +17,12 @@
 
 
 # DB structure
-* Xreated 3 tables
+* Created 3 tables
     * candidateFinder_candidate (id, title)
 	* candidateFinder_skill (id, title (unique))
 	* candidateFinder_candidate_skills (id, candidate_id,skill_id)
 		* This is the mapping table between candidate to his skills
+* You can find model view image in Attachment folder
 			
 * Connecting the postgres DB:
 	* Create DB server called 'matcher' (or any name and change it in the settings.py in the DATABASES section)
@@ -46,7 +49,7 @@
 	* skill_ratio is relevant for the `second Option` which has case of 2 candidates who have the same score on the title, with no exact skill, in that case, the match ratio on the candidate skills can make for an accurate match
 		
 
-# Extra what should i do to improve the project:
+# Extra what should I do to improve the project:
 * As part of the lack of time to work on this proj this week and the fact that I'm not that aware (yet) of python programming, Django framework, and Django ORM
 	* In the Data file - I should have made the query with Join and not separate and in memory (understood its something with `prefetch_related` or so)
 * Regarding unit test - as well lake of time from today till Thursday (sorry for that)
